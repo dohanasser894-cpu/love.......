@@ -1,0 +1,5336 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>infinity | Perfume Store</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">  <!-- Font Awesome -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">  <style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+scroll-behavior:smooth;  
+}  
+  
+body{  
+font-family:'Poppins',sans-serif;  
+background:#0f0f0f;  
+color:white;  
+overflow-x:hidden;  
+}  
+  
+a{  
+text-decoration:none;  
+color:white;  
+}  
+  
+ul{  
+list-style:none;  
+}  
+  
+/* Navbar */  
+  
+header{  
+position:fixed;  
+top:0;  
+left:0;  
+width:100%;  
+padding:18px 8%;  
+display:flex;  
+justify-content:space-between;  
+align-items:center;  
+z-index:999;  
+transition:.4s;  
+}  
+  
+header.active{  
+background:#111;  
+box-shadow:0 5px 20px rgba(0,0,0,.4);  
+}  
+  
+.logo{  
+font-family:'Cormorant Garamond',serif;  
+font-size:34px;  
+font-weight:bold;  
+letter-spacing:2px;  
+color:#d4af37;  
+}  
+  
+nav ul{  
+display:flex;  
+gap:35px;  
+}  
+  
+nav ul li a{  
+font-size:15px;  
+transition:.3s;  
+}  
+  
+nav ul li a:hover{  
+color:#d4af37;  
+}  
+  
+.icons{  
+display:flex;  
+gap:20px;  
+font-size:18px;  
+cursor:pointer;  
+}  
+  
+.icons i:hover{  
+color:#d4af37;  
+}  
+  
+/* Hero */  
+  
+.hero{  
+height:100vh;  
+  
+display:flex;  
+align-items:center;  
+padding:0 8%;  
+}  
+  
+.hero-content{  
+max-width:650px;  
+animation:fadeUp 1.2s;  
+}  
+  
+.hero-content h4{  
+color:#d4af37;  
+letter-spacing:5px;  
+margin-bottom:15px;  
+font-size:18px;  
+}  
+  
+.hero-content h1{  
+font-size:72px;  
+font-family:'Cormorant Garamond',serif;  
+line-height:1.1;  
+margin-bottom:20px;  
+}  
+  
+.hero-content p{  
+font-size:17px;  
+color:#ddd;  
+line-height:1.8;  
+margin-bottom:35px;  
+}  
+  
+.btn{  
+display:inline-block;  
+padding:15px 40px;  
+background:#d4af37;  
+color:black;  
+font-weight:600;  
+border-radius:40px;  
+transition:.4s;  
+}  
+  
+.btn:hover{  
+transform:translateY(-5px);  
+background:white;  
+}  
+  
+/* Scroll */  
+  
+.scroll-down{  
+position:absolute;  
+bottom:30px;  
+left:50%;  
+transform:translateX(-50%);  
+font-size:28px;  
+animation:move 1.5s infinite;  
+color:white;  
+}  
+  
+@keyframes move{  
+  
+0%{  
+transform:translate(-50%,0);  
+}  
+  
+50%{  
+transform:translate(-50%,12px);  
+}  
+  
+100%{  
+transform:translate(-50%,0);  
+}  
+  
+}  
+  
+@keyframes fadeUp{  
+  
+from{  
+opacity:0;  
+transform:translateY(50px);  
+}  
+  
+to{  
+opacity:1;  
+transform:translateY(0);  
+}  
+  
+}  
+  
+/* Responsive */  
+  
+@media(max-width:900px){  
+  
+.hero-content h1{  
+font-size:48px;  
+}  
+  
+.nav{  
+display:none;  
+}  
+}
+  
+</style>  </head>  <body>  <header id="header">  <div class="logo">  
+infinity  
+</div>  <nav>  <ul>  <li><a href="index.html">Home</a></li>  
+<li><a href="#products">products</a></li>  
+
+<li><a href="#why-us">why-us</a></li>  
+<li><a href="#videos">videos</a></li>  
+<li><a href="#footer">Contact</a></li>  </ul>  </nav> 
+
+
+<a href="cart.html" class="cart-icon">
+    <i class="fa-solid fa-cart-shopping"></i>>
+
+    <span id="cart-count">0</span>
+</a>
+<button class="heart">
+    <i class="fa-regular fa-heart"></i>
+    </button>
+<style>
+.cart-icon{
+
+    position:relative;
+    
+    display:inline-block;
+    
+    color:#fff;
+    
+    font-size:22px;
+    
+    text-decoration:none;
+    
+    }
+    
+    #cart-count{
+    
+    position:absolute;
+    
+    top:-10px;
+    
+    right:-12px;
+    
+    width:20px;
+    
+    height:20px;
+    
+    background:#D4AF37;
+    
+    color:#111;
+    
+    border-radius:50%;
+    
+    display:flex;
+    
+    justify-content:center;
+    
+    align-items:center;
+    
+    font-size:12px;
+    
+    font-weight:bold;
+    
+    box-shadow:0 0 10px rgba(212,175,55,.5);
+    
+    }
+
+    .heart{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.heart.active{
+    color:#D4AF37;
+}
+</style>
+    <style>
+
+/* Light Mode */
+
+body.light-mode{
+    background:#f5f5f5;
+    color:#111;
+    transition:.4s;
+}
+
+body.light-mode header{
+    background:#fff;
+}
+
+body.light-mode .products,
+body.light-mode .videos{
+    background:#eee;
+}
+
+body.light-mode .why-us{
+    background:#f8f8f8;
+}
+
+body.light-mode .product-card,
+body.light-mode .video-card,
+body.light-mode .feature-card{
+    background:#fff;
+    border:1px solid #ddd;
+}
+
+
+body.light-mode .products h1,
+body.light-mode .products h2,
+body.light-mode .products h3,
+body.light-mode .products p,
+body.light-mode .products a,
+
+/* ليه تختارنا */
+body.light-mode .why-us h1,
+body.light-mode .why-us h2,
+body.light-mode .why-us h3,
+body.light-mode .why-us p,
+body.light-mode .why-us a,
+
+/* الفيديوهات */
+body.light-mode .videos h1,
+body.light-mode .videos h2,
+body.light-mode .videos h3,
+body.light-mode .videos p,
+body.light-mode .videos a,
+
+/* الفوتر */
+body.light-mode .footer h1,
+body.light-mode .footer h2,
+body.light-mode .footer h3,
+body.light-mode .footer p,
+body.light-mode .footer a{
+
+    color:#111;
+}
+
+#theme-toggle{
+    cursor:pointer;
+    transition:.3s;
+}
+
+#theme-toggle:hover{
+    color:#D4AF37;
+    transform:rotate(20deg);
+}
+    </style>
+    <i class="fa-solid fa-sun" id="theme-toggle"></i>
+
+    <div class="search-box">
+    
+        <i class="fa-solid fa-magnifying-glass"></i>
+    
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="ابحث في Infinity...">
+    
+    </div>
+    <style>
+    .search-box{
+
+        display:flex;
+        align-items:center;
+        background:#222;
+        padding:10px 18px;
+        border-radius:35px;
+        width:280px;
+        
+        }
+        
+        .search-box i{
+        
+        color:#D4AF37;
+        margin-right:10px;
+        
+        }
+        
+        .search-box input{
+        
+        background:transparent;
+        border:none;
+        outline:none;
+        color:#fff;
+        width:100%;
+        font-size:15px;
+        
+        }
+        
+        .search-box input::placeholder{
+        
+        color:#999;
+        
+        }
+        </style>
+
+</div>  </header> 
+    <section class="hero" id="home">
+
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="dooo/hero.mp4" type="video/mp4">
+        </video>
+    
+        <div class="overlay"></div>
+    
+    
+    
+    
+    <div class="hero-content">  <h4>infinity PERFUMES</h4>  <h1>Discover The Perfect Fragrance For You</h1>  <p>  
+Explore an exclusive collection of premium perfumes from the world's finest brands. Find the scent that defines your personality.  
+</p>  <a href="#products" class="btn">Shop Now</a>
+    </div>
+</div>  <a href="#products" class="scroll-down">  
+<i class="fa-solid fa-angle-down"></i>  
+</a>  </section>  
+
+<style>
+.hero{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    overflow: hidden;
+}
+
+.hero-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+    z-index: -1;
+}
+.hero-content h1,
+.hero-content h4,
+.hero-content p{
+
+    color:#fff !important;
+
+}
+
+</style>
+<!-- ================= FEATURED PRODUCTS ================= --> 
+<section class="products" id="products">  
+    <div class="section-title">  
+   <span>OUR COLLECTION</span>  
+
+   <h2>Featured Products</h2>  
+
+   <p>Explore Our inifinty Perfumes</p>  
+
+<div class="products-grid">  
+
+    <!-- Product 1 -->  
+
+
+
+    <div class="product-card">
+
+        <div class="heart" onclick="toggleHeart(this)">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    
+        <div class="product-image">
+            <img src="images/product1.png" alt="">
+        </div>
+    
+        <h3>اصل العود والمسك</h3>
+    
+        <span class="brand">-infinity-</span>
+    
+        <div class="card-footer">
+    
+            <span class="price">2400 EGP</span>
+    
+            <button class="cart-btn"
+                    data-name="اصل العود والمسك"
+                    data-price="2400"
+                    data-image="images/product1.png">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+    
+        </div>
+    
+    </div>
+    <!-- Product 2 -->  
+
+
+    <div class="product-card">
+
+        <div class="heart" onclick="toggleHeart(this)">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    
+        <div class="product-image">
+            <img src="images/product2.png" alt="">
+        </div>
+    
+        <h3>jadore</h3>
+    
+        <span class="brand">-infinity-</span>
+    
+        <div class="card-footer">
+    
+            <span class="price">2400 EGP</span>
+    
+            <button class="cart-btn"
+                    data-name="jadore"
+                    data-price="20"
+                    data-image="images/product2.png">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+    
+        </div>
+    
+    </div>
+    
+
+    <!-- Product 3 -->  
+
+
+    <div class="product-card">
+
+        <div class="heart" onclick="toggleHeart(this)">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    
+        <div class="product-image">
+            <img src="images/product3.png" alt="">
+        </div>
+    
+        <h3>DAVIDOFF<br>CHAMPION</h3>
+    
+        <span class="brand">-infinity-</span>
+    
+        <div class="card-footer">
+    
+            <span class="price">2400 EGP</span>
+    
+            <button class="cart-btn"
+                    data-name="DAVIDOFF
+                    <br>CHAMPION"
+                    data-price="20"
+                    data-image="images/product3.png">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+    
+        </div>
+    
+    </div>
+    
+
+    <!-- Product 2 -->  
+
+
+    <div class="product-card">
+
+        <div class="heart" onclick="toggleHeart(this)">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    
+        <div class="product-image">
+            <img src="images/product4.png" alt="">
+        </div>
+    
+        <h3>ليبرا</h3>
+    
+        <span class="brand">-infinity-</span>
+    
+        <div class="card-footer">
+    
+            <span class="price">2400 EGP</span>
+    
+            <button class="cart-btn"
+                    data-name="ليبرا"
+                    data-price="20"
+                    data-image="images/product4.png">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+    
+        </div>
+    
+    </div>
+    <!-- Product 5-->  
+
+
+    <div class="product-card">
+
+        <div class="heart" onclick="toggleHeart(this)">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+    
+        <div class="product-image">
+            <img src="images/product5.png" alt="">
+        </div>
+    
+        <h3>ALLURE</h3>
+    
+        <span class="brand">-infinity-</span>
+    
+        <div class="card-footer">
+    
+            <span class="price">2400 EGP</span>
+    
+            <button class="cart-btn"
+                    data-name="ALLURE"
+                    data-price="20"
+                    data-image="images/product5.png">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+    
+        </div>
+    
+    </div>
+    
+<!-- Product 6 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product6.png" alt="">
+    </div>
+
+    <h3>ACQUAGDI</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="ACQUAGDI"
+                data-price="20"
+                data-image="images/product6.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 7-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product7.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product7.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Product 8 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product8.png" alt="">
+    </div>
+
+    <h3>BURBERRY</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="BURBERRY"
+                data-price="20"
+                data-image="images/product8.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 2 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product9.png" alt="">
+    </div>
+
+    <h3>212 VIP</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product9.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 2 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product10.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product10.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Product 11 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product11.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product11.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 212-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product12.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product12.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 13-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product13.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product13.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 14-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product14.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product14.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 215-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product15.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product15.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 16-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product16.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product16.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 17-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product17.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product17.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 18-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product18.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product18.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 19 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product19.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product19.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 20 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product20.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product20.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 21 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product21.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product21.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 22 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product22.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product22.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 23 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product23.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product23.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 24-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product24.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product24.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 25 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product25.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product25.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 26 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product26.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product26.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+
+  <!-- Product 27 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product27.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product27.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 28 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product28.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product28.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 29 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product29.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product29.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 30-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product30.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product30.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 31-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product31.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product31.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 32 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product32.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product32.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 33 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product33.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product33.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 34-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product34.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product34.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 35 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product35.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product35.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 36 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product36.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product36.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 37 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product37.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product37.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 38-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product38.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product38.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 39 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product39.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product39.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 40 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product40.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product40.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 41-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product41.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product41.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 42 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product42.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product42.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 43 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product43.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product43.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 44 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product44.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product44.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 245-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product45.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product45.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 46 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product46.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product46.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 47-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product47.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product47.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 48 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product48.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product48.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 49 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product49.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product49.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 50-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product50.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product50.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 51-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product51.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product51.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 52-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product52.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product52.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 53-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product53.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product53.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 54 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product54.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product54.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 55-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product55.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product55.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 65 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product56.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product56.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 57 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product57.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product57.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 58-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product58.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product58.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 59-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product59.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product59.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 60-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product60.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product60.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 61 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product61.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product61.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 62 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product62.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product62.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 63 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product63.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product63.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 64 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product64.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product64.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 65 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product65.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product65.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 66 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product66.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product66.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 67 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product67.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product67.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 68 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product68.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product68.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 69 -->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product69.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product69.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Product 70-->  
+
+
+<div class="product-card">
+
+    <div class="heart" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="product-image">
+        <img src="images/product70.png" alt="">
+    </div>
+
+    <h3>jadore</h3>
+
+    <span class="brand">-infinity-</span>
+
+    <div class="card-footer">
+
+        <span class="price">2400 EGP</span>
+
+        <button class="cart-btn"
+                data-name="jadore"
+                data-price="20"
+                data-image="images/product70.png">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+
+    </div>
+
+</div>
+</div>
+<style> 
+ .products{
+padding:100px 8%;
+background:#111;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title span{
+color:#D4AF37;
+font-size:14px;
+letter-spacing:4px;
+text-transform:uppercase;
+}
+
+.section-title h2{
+font-size:48px;
+margin:10px 0;
+font-family:'Cormorant Garamond',serif;
+color:#fff;
+}
+
+.section-title p{
+color:#999;
+font-size:15px;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.product-card{
+background:#1a1a1a;
+border-radius:18px;
+padding:20px;
+position:relative;
+transition:.4s;
+overflow:hidden;
+border:1px solid #252525;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(212,175,55,.18);
+}
+
+.heart{
+position:absolute;
+top:18px;
+right:18px;
+width:38px;
+height:38px;
+border-radius:50%;
+background:#222;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.heart:hover{
+background:#D4AF37;
+color:#111;
+}
+
+.product-image{
+height:190px;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:18px;
+}
+
+.product-image img{
+width:140px;
+transition:.4s;
+}
+
+.product-card:hover .product-image img{
+transform:scale(1.08);
+}
+
+.product-card h3{
+text-align:center;
+font-size:23px;
+color:#fff;
+margin-bottom:5px;
+font-family:'Cormorant Garamond',serif;
+}
+
+.brand{
+display:block;
+text-align:center;
+color:#888;
+margin-bottom:18px;
+font-size:14px;
+}
+
+.card-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.price{
+color:#D4AF37;
+font-size:20px;
+font-weight:600;
+}
+
+.cart-btn{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#D4AF37;
+color:#111;
+cursor:pointer;
+transition:.3s;
+font-size:17px;
+}
+
+.cart-btn:hover{
+transform:scale(1.1) rotate(10deg);
+background:#fff;
+}
+
+@media(max-width:992px){
+
+.products-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.products-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.products-grid{
+grid-template-columns:1fr;
+}
+
+.section-title h2{
+font-size:38px;
+}
+
+.product-image{
+height:160px;
+}
+
+.product-image img{
+width:120px;
+}
+
+}
+</style>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why-us" id="why-us">
+
+
+    <div class="section-title">
+    
+    <span>WHY US</span>
+    
+    <h2>Why Choose Infinity?</h2>
+    
+    <p>Luxury fragrance experience made for you</p>
+    
+    </div>
+    
+    
+    
+    <div class="features">
+    
+    
+    <div class="feature-card">
+    
+    <i class="fa-solid fa-gem"></i>
+    
+    <h3>Original Perfumes</h3>
+    
+    <p>
+    100% authentic fragrances from trusted brands.
+    </p>
+    
+    </div>
+    
+    
+    
+    
+    <div class="feature-card">
+    
+    <i class="fa-solid fa-truck-fast"></i>
+    
+    <h3>Fast Delivery</h3>
+    
+    <p>
+    Quick and safe delivery to your doorstep.
+    </p>
+    
+    </div>
+    
+    
+    
+    
+    <div class="feature-card">
+    
+    <i class="fa-solid fa-box-open"></i>
+    
+    <h3>Luxury Packaging</h3>
+    
+    <p>
+    Elegant packaging that matches your premium choice.
+    </p>
+    
+    </div>
+    
+    
+    
+    
+    <div class="feature-card">
+    
+    <i class="fa-solid fa-shield-halved"></i>
+    
+    <h3>Secure Payment</h3>
+    
+    <p>
+    Safe and easy payment methods for every order.
+    </p>
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    </section>
+    <style>
+
+    /* WHY CHOOSE US */
+
+
+.why-us{
+
+padding:100px 8%;
+background:#0f0f0f;
+
+}
+
+
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+
+
+.feature-card{
+
+background:#171717;
+border:1px solid #252525;
+padding:35px 25px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+
+}
+
+
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(212,175,55,.15);
+
+}
+
+
+
+.feature-card i{
+
+font-size:35px;
+color:#D4AF37;
+margin-bottom:20px;
+
+}
+
+
+
+.feature-card h3{
+
+font-family:'Cormorant Garamond',serif;
+font-size:28px;
+margin-bottom:12px;
+
+}
+
+
+
+.feature-card p{
+
+color:#999;
+font-size:14px;
+line-height:1.7;
+
+}
+
+
+
+
+@media(max-width:1000px){
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+</style>
+<!-- ================= VIDEOS ================= -->
+<section class="videos" id="videos">
+
+
+    <div class="section-title">
+        <span>OUR VIDEOS</span>
+        <h2>Perfume Videos</h2>
+        <p>Watch our luxury fragrance collection</p>
+    </div>
+
+    <div class="videos-grid">
+
+        <!-- Video 1 -->
+        <div class="video-card">
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="video-box">
+                <video autoplay  loop playsinline controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+            <div class="card-footer">
+
+                <span class="price">order Now</span>
+
+                <button class="cart-btn"
+                onclick="orderNow('1')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+<!-- Video 2-->
+        <div class="video-card">
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="video-box">
+                <video autoplay loop playsinline controls>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+
+
+            <div class="card-footer">
+
+                <span class="price">order Now</span>
+
+                <button class="cart-btn"
+                onclick="orderNow('2')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </div>
+            </div>
+<!-- Video 3 -->
+<div class="video-card">
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="video-box">
+                <video autoplay  loop playsinline controls>
+                    <source src="videos/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+
+            <div class="card-footer">
+
+                <span class="price">order Now</span>
+
+                <button class="cart-btn"
+                onclick="orderNow('3')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </div>
+</div>
+<!-- Video 4 -->
+            <div class="video-card">
+
+                <div class="heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+    
+                <div class="video-box">
+                    <video autoplay  loop playsinline controls>
+                        <source src="videos/video4.mp4" type="video/mp4">
+                    </video>
+                </div>
+    
+                <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+    
+                <div class="card-footer">
+    
+                    <span class="price">order Now</span>
+    
+                    <button class="cart-btn"
+                onclick="orderNow('4')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    </button>
+    
+                </div>
+            </div>
+<!-- Video 5 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video5.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('5')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 6 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video6.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('6e')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 7-->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video7.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('7')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 8 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video8.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('8')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 9 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video9.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('9')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 10 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video10.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('10')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 11 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video11.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('11')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 12 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video12.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('12')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 13 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video13.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('13')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 14 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video14.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('14')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 15 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video15.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('15')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 16 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video16.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('16')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 17 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video17.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('17')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 18 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video18.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('18')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 19 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video19.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('19')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 19 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video19.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('19')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- Video 20-->
+        <div class="video-card">
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="video-box">
+                <video autoplay  loop playsinline controls>
+                    <source src="videos/video20.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+            <div class="card-footer">
+
+                <span class="price">order Now</span>
+
+                <button class="cart-btn"
+                onclick="orderNow('20')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Video 21 -->
+        <div class="video-card">
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+
+            <div class="video-box">
+                <video autoplay  loop playsinline controls>
+                    <source src="videos/video21.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3>Original perfumes</h3>
+
+            <span class="price">infinity</span>
+
+            <div class="card-footer">
+
+                <span class="price">order Now</span>
+
+                <button class="cart-btn"
+                onclick="orderNow('21')">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+            </div>
+
+        </div>
+<!-- Video 22 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video22.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('22')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 23 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video23.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('23')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 24 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video24.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('24')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 25 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video25.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('25')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 26 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video26.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('26')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 27 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video27.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('27')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 28 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video28.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('28')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 29 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video29.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('29')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 30 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video30.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('30')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 31 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video31.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('31')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 32 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video32.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('32')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 33-->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('33')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 34-->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video34.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('34')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 35 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video35.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('35')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 36 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video36.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('36')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 37 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('37')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 38 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('38')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 39 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video39.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('39')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 40 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video40.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('40')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+    <!-- Video 41-->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video41.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('41')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 42 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video42.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('42')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+<!-- Video 43 -->
+<div class="video-card">
+
+    <div class="heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <div class="video-box">
+        <video autoplay  loop playsinline controls>
+            <source src="videos/video43.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h3>Original perfumes</h3>
+
+    <span class="price">infinity</span>
+    <div class="card-footer">
+
+        <span class="price">order Now</span>
+
+        <button class="cart-btn"
+        onclick="orderNow('43')">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+<style>
+.videos{
+    padding:100px 8%;
+    background:#111;
+}
+
+.videos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.video-card{
+    background:#1a1a1a;
+    border-radius:18px;
+    padding:20px;
+    position:relative;
+    border:1px solid #252525;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.video-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(212,175,55,.18);
+}
+
+.video-box{
+    height:190px;
+    border-radius:15px;
+    overflow:hidden;
+    margin-bottom:18px;
+}
+
+.video-box video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.video-card:hover video{
+    transform:scale(1.08);
+}
+
+.video-card h3{
+    text-align:center;
+    font-size:23px;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:5px;
+}
+
+.video-card .brand{
+    display:block;
+    text-align:center;
+    color:#888;
+    margin-bottom:18px;
+}
+</style>
+
+<!-- ================= AI CHAT ================= -->
+
+<button id="chat-btn">
+    <i class="fa-solid fa-robot"></i>
+</button>
+
+<div id="chat-box">
+
+    <div class="chat-header">
+        🤖 Infinity AI
+    </div>
+
+    <div id="messages">
+
+        <div class="bot">
+            👋 أهلاً بحضرتك في <b>Infinity Perfumes</b> 🌸
+            <br><br>
+
+            أنا <b>Infinity AI 
+             
+                ❤️
+                اقدر اساعد حضرتك ازاي 
+            </b>
+
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="اكتب سؤالك...">
+
+        <button onclick="sendMessage()">
+            إرسال
+        </button>
+
+    </div>
+
+</div>
+    <style>
+/* ================= AI BUTTON ================= */
+
+#chat-btn{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:65px;
+height:65px;
+
+border:none;
+border-radius:50%;
+
+background:linear-gradient(135deg,#D4AF37,#f7d774);
+
+color:#111;
+
+font-size:28px;
+
+cursor:pointer;
+
+z-index:9999;
+
+box-shadow:0 10px 25px rgba(212,175,55,.45);
+
+transition:.3s;
+
+animation:pulse 2s infinite;
+
+}
+
+#chat-btn:hover{
+
+transform:scale(1.08);
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(212,175,55,.6);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(212,175,55,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(212,175,55,0);
+
+}
+
+}
+
+/* ================= CHAT BOX ================= */
+
+#chat-box{
+
+position:fixed;
+
+bottom:100px;
+
+right:25px;
+
+width:340px;
+
+height:480px;
+
+background:#1b1b1b;
+
+display:none;
+
+flex-direction:column;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+z-index:9999;
+
+border:1px solid #D4AF37;
+
+}
+
+.chat-header{
+
+background:#D4AF37;
+
+color:#111;
+
+padding:18px;
+
+text-align:center;
+
+font-size:20px;
+
+font-weight:700;
+
+}
+
+#messages{
+
+flex:1;
+
+padding:15px;
+
+overflow-y:auto;
+
+background:#161616;
+
+}
+
+.bot{
+
+background:#2a2a2a;
+
+padding:12px;
+
+border-radius:12px;
+
+margin-bottom:12px;
+
+line-height:1.8;
+
+max-width:90%;
+
+}
+
+.user{
+
+background:#D4AF37;
+
+color:#111;
+
+padding:12px;
+
+border-radius:12px;
+
+margin:12px 0;
+
+margin-left:auto;
+
+max-width:90%;
+
+}
+
+.chat-input{
+
+display:flex;
+
+border-top:1px solid #333;
+
+}
+
+.chat-input input{
+
+flex:1;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+background:#222;
+
+color:#fff;
+
+font-size:15px;
+
+}
+
+.chat-input button{
+
+width:90px;
+
+border:none;
+
+background:#D4AF37;
+
+color:#111;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.chat-input button:hover{
+
+background:#f1d36b;
+
+}
+
+/* ================= TYPING ================= */
+
+.typing{
+
+background:#2a2a2a;
+
+padding:12px;
+
+border-radius:12px;
+
+width:fit-content;
+
+margin-bottom:10px;
+
+}
+
+.typing::after{
+
+content:"...";
+
+animation:dots 1s infinite;
+
+}
+
+@keyframes dots{
+
+0%{content:".";}
+
+33%{content:"..";}
+
+66%{content:"...";}
+
+100%{content:".";}
+}
+</style>
+
+<script>  
+  
+window.addEventListener("scroll",function(){  
+  
+document.getElementById("header").classList.toggle("active",window.scrollY>50);  
+  
+});  
+
+
+
+  </script>
+<!-- FOOTER -->
+
+
+<footer class="footer section"  id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>infinity</h3>
+        <p>Discover The Perfect Fragrance For You </p>  
+            Explore an exclusive collection of premium perfumes from the world's finest brands. Find the scent that defines your personality.  
+            
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#index.html">Home</a></li>
+          <li><a href="#chat Ai">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 infinity — All Rights Reserved
+    </div>
+  </footer>
+<style>
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 8%;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff9a9e;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff9a9e;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #ccc;
+}
+</style>
+<script>
+    function orderProduct(name, price){
+    
+    const phone = "2001559575677";
+    
+    const message = `Hello Infinity Perfumes 🌸
+    
+    I would like to order:
+    
+    🛍️ Product: ${name}
+    💰 Price: ${price}`;
+    
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    
+    window.open(url, "_blank");
+    
+    }
+    </script>
+
+  <script>
+function toggleHeart(element){
+    const icon = element.querySelector("i");
+
+    if(icon.classList.contains("fa-regular")){
+        icon.classList.remove("fa-regular");
+        icon.classList.add("fa-solid");
+        icon.style.color = "red";
+    }else{
+        icon.classList.remove("fa-solid");
+        icon.classList.add("fa-regular");
+        icon.style.color = "";
+    }
+}
+</script>
+
+
+<script>
+    function orderNow(product){
+    
+        const phone = "2001559575677";
+    
+        const message = `Hello Infinity Perfumes 🌸
+    
+    I would like to order:
+    
+    
+    product: ${product}`;
+    
+        const url =`https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    
+        window.open(url, "_blank");
+    }
+    </script>
+
+    
+    
+<script>
+    
+
+
+const chatBtn = document.getElementById("chat-btn");
+const chatBox = document.getElementById("chat-box");
+const messages = document.getElementById("messages");
+const input = document.getElementById("userInput");
+
+// فتح وقفل الشات
+chatBtn.onclick = function(){
+
+    if(chatBox.style.display === "flex"){
+
+        chatBox.style.display = "none";
+
+    }else{
+
+        chatBox.style.display = "flex";
+        input.focus();
+
+    }
+
+}
+
+// إرسال بالضغط على Enter
+input.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        sendMessage();
+
+    }
+
+});
+
+// إرسال الرسالة
+function sendMessage(){
+
+    let text=input.value.trim().toLowerCase();
+
+    if(text==="") return;
+
+    messages.innerHTML +=`<div class="user">${input.value}</div>`;
+
+    input.value="";
+
+    messages.innerHTML += `<div class="typing" id="typing">Infinity AI</div>`;
+
+    messages.scrollTop=messages.scrollHeight;
+
+    setTimeout(function(){
+const typing=
+        document.getElementById("توصيل");
+        if(typing){
+        typing.remove();
+        }
+        let reply="❌ .<br><br>ييييي❤️";
+
+        if(text.includes("السلام")||text.includes("اهلا")||text.includes("مرحبا")||text.includes("هاي")){
+
+            reply="👋 أهلاً بحضرتك، أقدر أساعدك في اختيار البرفان المناسب.";
+
+        }
+
+        else if(text.includes("اصلي")){
+
+            reply="✅ نعم، جميع البرفانات لدينا أصلية 100٪.";
+
+        }
+
+        else if(text.includes("سعر")||text.includes("بكام")){
+
+            reply="💰 الأسعار موجودة داخل قسم المنتجات بالموقع.";
+
+        }
+
+        else if(text.includes("رجالي")){
+
+            reply="👔 لدينا Dior Sauvage و Club De Nuit و Bleu de Chanel.";
+
+        }
+
+        else if(text.includes("حريمي")||text.includes("بنات")){
+
+            reply="🌸 لدينا Libre و Good Girl و Black Opium.";
+
+        }
+
+        else if(text.includes("هدية")){
+
+            reply="🎁 أنصحك بـ Libre للسيدات و Dior Sauvage للرجال.";
+
+        }
+
+        else if(text.includes("ثبات")){
+
+            reply="✨ معظم البرفانات تدوم من 6 إلى 12 ساعة.";
+
+        }
+
+        else if(text.includes("فواح")){
+
+            reply="🔥 أكثر البرفانات فوحانًا Dior Sauvage و Club De Nuit.";
+
+        }
+
+        else if(text.includes("شحن")||text.includes("توصيل")){
+
+            reply="🚚 نوفر الشحن لجميع محافظات مصر خلال 2 إلى 4 أيام.";
+
+        }
+
+        else if(text.includes("دفع")){
+
+            reply="💳 يمكنك الدفع عند الاستلام.";
+
+        }
+
+        else if(text.includes("طلب")){
+
+            reply="📦 يمكنك الطلب من خلال زر الواتساب الموجود بجوار كل منتج.";
+
+        }
+
+        else if(text.includes("واتساب")){
+
+            reply="📱 اضغط على زر الواتساب الموجود بجوار المنتج وسيتم فتح المحادثة مباشرة.";
+
+        }
+
+        else if(text.includes("خصم")){
+
+            reply="🎉 تابع الموقع باستمرار لمعرفة أحدث العروض.";
+
+        }
+
+        else if(text.includes("شكرا")||text.includes("ميرسي")){
+
+            reply="❤️ العفو، سعدت بخدمتك.";
+
+        }
+
+        messages.innerHTML +=`<div class="bot">${reply}</div>`;
+
+        messages.scrollTop = messages.scrollHeight;
+
+    },1000);
+
+}
+    </script>
+
+
+<script>
+
+const toggle = document.getElementById("theme-toggle");
+
+// أول ما الموقع يفتح
+if(localStorage.getItem("theme") === "light"){
+
+    document.body.classList.add("light-mode");
+
+    toggle.classList.remove("fa-sun");
+    toggle.classList.add("fa-moon");
+
+}else{
+
+    document.body.classList.remove("light-mode");
+
+    toggle.classList.remove("fa-moon");
+    toggle.classList.add("fa-sun");
+
+}
+
+// عند الضغط على الشمس
+toggle.addEventListener("click",function(){
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        localStorage.setItem("theme","light");
+
+        toggle.classList.remove("fa-sun");
+        toggle.classList.add("fa-moon");
+
+    }else{
+
+        localStorage.setItem("theme","dark");
+
+        toggle.classList.remove("fa-moon");
+        toggle.classList.add("fa-sun");
+
+    }
+
+});
+
+</script>
+<script>
+const search = document.getElementById("search");
+
+search.addEventListener("keyup", function () {
+
+    const value = this.value.toLowerCase();
+
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+
+        const name = product.querySelector("h3").textContent.toLowerCase();
+
+        if (name.includes(value)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+
+});
+</script>
+ </body>  
+</html>  
+
+    
+    
+<script>
+    
+
+
+const chatBtn = document.getElementById("chat-btn");
+const chatBox = document.getElementById("chat-box");
+const messages = document.getElementById("messages");
+const input = document.getElementById("userInput");
+
+// فتح وقفل الشات
+chatBtn.onclick = function(){
+
+    if(chatBox.style.display === "flex"){
+
+        chatBox.style.display = "none";
+
+    }else{
+
+        chatBox.style.display = "flex";
+        input.focus();
+
+    }
+
+}
+
+// إرسال بالضغط على Enter
+input.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        sendMessage();
+
+    }
+
+});
+
+// إرسال الرسالة
+function sendMessage(){
+
+    let text=input.value.trim().toLowerCase();
+
+    if(text==="") return;
+
+    messages.innerHTML +=`<div class="user">${input.value}</div>`;
+
+    input.value="";
+
+    messages.innerHTML += `<div class="typing" id="typing">Infinity AI</div>`;
+
+    messages.scrollTop=messages.scrollHeight;
+
+    setTimeout(function(){
+const typing=
+        document.getElementById("توصيل");
+        if(typing){
+        typing.remove();
+        }
+        let reply="❌ .<br><br>ييييي❤️";
+
+        if(text.includes("السلام")||text.includes("اهلا")||text.includes("مرحبا")||text.includes("هاي")){
+
+            reply="👋 أهلاً بحضرتك، أقدر أساعدك في اختيار البرفان المناسب.";
+
+        }
+
+        else if(text.includes("اصلي")){
+
+            reply="✅ نعم، جميع البرفانات لدينا أصلية 100٪.";
+
+        }
+
+        else if(text.includes("سعر")||text.includes("بكام")){
+
+            reply="💰 الأسعار موجودة داخل قسم المنتجات بالموقع.";
+
+        }
+
+        else if(text.includes("رجالي")){
+
+            reply="👔 لدينا Dior Sauvage و Club De Nuit و Bleu de Chanel.";
+
+        }
+
+        else if(text.includes("حريمي")||text.includes("بنات")){
+
+            reply="🌸 لدينا Libre و Good Girl و Black Opium.";
+
+        }
+
+        else if(text.includes("هدية")){
+
+            reply="🎁 أنصحك بـ Libre للسيدات و Dior Sauvage للرجال.";
+
+        }
+
+        else if(text.includes("ثبات")){
+
+            reply="✨ معظم البرفانات تدوم من 6 إلى 12 ساعة.";
+
+        }
+
+        else if(text.includes("فواح")){
+
+            reply="🔥 أكثر البرفانات فوحانًا Dior Sauvage و Club De Nuit.";
+
+        }
+
+        else if(text.includes("شحن")||text.includes("توصيل")){
+
+            reply="🚚 نوفر الشحن لجميع محافظات مصر خلال 2 إلى 4 أيام.";
+
+        }
+
+        else if(text.includes("دفع")){
+
+            reply="💳 يمكنك الدفع عند الاستلام.";
+
+        }
+
+        else if(text.includes("طلب")){
+
+            reply="📦 يمكنك الطلب من خلال زر الواتساب الموجود بجوار كل منتج.";
+
+        }
+
+        else if(text.includes("واتساب")){
+
+            reply="📱 اضغط على زر الواتساب الموجود بجوار المنتج وسيتم فتح المحادثة مباشرة.";
+
+        }
+
+        else if(text.includes("خصم")){
+
+            reply="🎉 تابع الموقع باستمرار لمعرفة أحدث العروض.";
+
+        }
+
+        else if(text.includes("شكرا")||text.includes("ميرسي")){
+
+            reply="❤️ العفو، سعدت بخدمتك.";
+
+        }
+
+        messages.innerHTML +=`<div class="bot">${reply}</div>`;
+
+        messages.scrollTop = messages.scrollHeight;
+
+    },1000);
+
+}
+    </script>
+
+
+<script>
+
+const toggle = document.getElementById("theme-toggle");
+
+// أول ما الموقع يفتح
+if(localStorage.getItem("theme") === "light"){
+
+    document.body.classList.add("light-mode");
+
+    toggle.classList.remove("fa-sun");
+    toggle.classList.add("fa-moon");
+
+}else{
+
+    document.body.classList.remove("light-mode");
+
+    toggle.classList.remove("fa-moon");
+    toggle.classList.add("fa-sun");
+
+}
+
+// عند الضغط على الشمس
+toggle.addEventListener("click",function(){
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+
+        localStorage.setItem("theme","light");
+
+        toggle.classList.remove("fa-sun");
+        toggle.classList.add("fa-moon");
+
+    }else{
+
+        localStorage.setItem("theme","dark");
+
+        toggle.classList.remove("fa-moon");
+        toggle.classList.add("fa-sun");
+
+    }
+
+});
+
+</script>
+
+<script>
+    function orderProduct(name, price){
+    
+    const phone = "2001559575677";
+    
+    const message = `Hello Infinity Perfumes 🌸
+    
+    I would like to order:
+    
+    🛍️ Product: ${name}
+    💰 Price: ${price}`;
+    
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    
+    window.open(url, "_blank");
+    
+    }
+    </script>
+
+  <script>
+function toggleHeart(element){
+    const icon = element.querySelector("i");
+
+    if(icon.classList.contains("fa-regular")){
+        icon.classList.remove("fa-regular");
+        icon.classList.add("fa-solid");
+        icon.style.color = "red";
+    }else{
+        icon.classList.remove("fa-solid");
+        icon.classList.add("fa-regular");
+        icon.style.color = "";
+    }
+}
+</script>
+<script>
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    updateCartCount();
+    
+    document.querySelectorAll(".cart-btn").forEach(button=>{
+    
+    button.addEventListener("click",function(){
+    
+    const product={
+    
+    name:this.dataset.name,
+    price:Number(this.dataset.price),
+    image:this.dataset.image,
+    quantity:1
+    
+    };
+    
+    const existing=cart.find(item=>item.name===product.name);
+    
+    if(existing){
+    
+    existing.quantity++;
+    
+    }else{
+    
+    cart.push(product);
+    
+    }
+    
+    localStorage.setItem("cart",JSON.stringify(cart));
+    
+    updateCartCount();
+    
+showToast(product.Name);  
+    });
+    
+    });
+    
+    function updateCartCount(){
+    
+    const count=document.getElementById("cart-count");
+    
+    if(!count) return;
+    
+    let total=0;
+    
+    cart.forEach(item=>{
+    
+    total+=item.quantity;
+    
+    });
+    
+    count.innerHTML=total;
+    
+
+    }
+    </script>
+    <script>
+    function showToast(name){
+    let toast=document.getElementById("toast");
+    toast.innerHTML=`<i class="fa-solid fa-check"></i> ${name}تمت إضافتة  للسلة
+    <br>
+    please check the cart`;
+;
+
+    toast.classList.add("show");
+
+    setTimeout(()=>{
+        toast.classList.remove("show");
+    },2500);
+}
+document.querySelectorAll(".heart").forEach(btn=>{
+    btn.onclick=()=>{
+        btn.classList.toggle("active");
+        btn.innerHTML=btn.classList.contains("active")
+        ? '<i class="fa-solid fa-heart"></i>'
+        : '<i class="fa-regular fa-heart"></i>';
+    }
+});
+    </script>
+    <div id="toast">
+        <i class="fa-solid fa-check"></i>
+        تمت إضافة المنتج للسلة
+    </div>
+    <style>
+        #toast{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background:#D4AF37;
+    color:#111;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transform:translateY(100px);
+    opacity:0;
+    transition:.4s;
+    z-index:9999;
+}
+
+#toast.show{
+    transform:translateY(0);
+    opacity:1;
+}
+    </style>
+ </body>  
+</html>  
